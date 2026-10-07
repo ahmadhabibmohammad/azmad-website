@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AZMAD Engineering Services Limited - Multi-disciplinary engineering, petroleum consultancy, renewable energy, and industrial training." />
+  <title>AZMAD Engineering Services Limited | The Engineering for Your Solution</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Segoe+UI:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary-navy: #0B2545;
+      --navy-dark: #07192F;
+      --accent-red: #D92525;
+      --accent-blue: #2E5AAC;
+      --charcoal: #22252A;
+      --text-main: #1A202C;
+      --text-muted: #4A5568;
+      --bg-light: #F8FAFC;
+      --bg-white: #FFFFFF;
+      --border-color: #E2E8F0;
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+      --shadow-md: 0 8px 24px rgba(11, 37, 69, 0.09);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-white);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary-navy);
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      text-align: center;
+    }
+
+    .btn-red {
+      background-color: var(--accent-red);
+      color: #FFFFFF;
+    }
+
+    .btn-red:hover {
+      background-color: #B51C1C;
+      color: #FFFFFF;
+    }
+
+    .btn-outline-white {
+      border-color: #fff;
+      color: #fff;
+    }
+
+    .btn-outline-white:hover {
+      background-color: #fff;
+      color: var(--primary-navy);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 4px;
+      background-color: var(--accent-red);
+      bottom: -10px;
+      left: 20%;
+      border-radius: 2px;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      margin-top: 15px;
+      font-size: 1.05rem;
+    }
+
+    /* Top Bar */
+    .top-bar {
+      background-color: var(--navy-dark);
+      color: #CBD5E1;
+      padding: 8px 0;
+      font-size: 0.85rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .top-bar-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-right: 20px;
+    }
+
+    .top-bar-item i {
+      color: var(--accent-red);
+    }
+
+    /* Header / Nav */
+    header {
+      background: var(--bg-white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow-sm);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .brand-logo img {
+      height: 56px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-logo-text .logo-main {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary-navy);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .brand-logo-text .logo-sub {
+      font-size: 0.68rem;
+      color: var(--accent-red);
+      font-weight: 700;
+      letter-spacing: 0.8px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links li a {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--primary-navy);
+    }
+
+    .nav-links li a:hover {
+      color: var(--accent-red);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: var(--primary-navy);
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(11, 37, 69, 0.92), rgba(7, 25, 47, 0.96)), 
+                  radial-gradient(circle at top right, #1b3a63, #07192f);
+      color: #fff;
+      padding: 120px 0 100px;
+      text-align: left;
+    }
+
+    .hero-content {
+      max-width: 820px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(217, 37, 37, 0.15);
+      color: #FFA5A5;
+      border: 1px solid var(--accent-red);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-size: 3.1rem;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #E2E8F0;
+      margin-bottom: 35px;
+      max-width: 700px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    /* Key Facts Ribbon */
+    .stats-ribbon {
+      background-color: var(--navy-dark);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 30px 0;
+      color: #fff;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat-item h3 {
+      color: var(--accent-red);
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    .stat-item p {
+      font-size: 0.9rem;
+      color: #CBD5E1;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Featured Infographic Banner */
+    .corporate-infographic-section {
+      padding: 80px 0;
+      background-color: var(--bg-white);
+    }
+
+    .infographic-wrapper {
+      background: var(--bg-light);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .infographic-wrapper img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+
+    /* Advert Showcase Grid */
+    .campaigns-section {
+      padding: 90px 0;
+      background-color: var(--bg-light);
+    }
+
+    .campaign-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 35px;
+    }
+
+    .campaign-card {
+      background: #FFFFFF;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+
+    .campaign-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .campaign-media {
+      background-color: #07192F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      min-height: 380px;
+    }
+
+    .campaign-media img {
+      max-width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    .campaign-media.circular img {
+      border-radius: 50%;
+      max-width: 320px;
+      border: 4px solid rgba(255,255,255,0.1);
+    }
+
+    .campaign-desc {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .campaign-desc .tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-red);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .campaign-desc h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .campaign-desc p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .campaign-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .campaign-highlights span {
+      background: var(--bg-light);
+      border: 1px solid var(--border-color);
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 12px;
+      color: var(--primary-navy);
+      font-weight: 600;
+    }
+
+    /* Training Programs Showcase */
+    .academy-section {
+      padding: 90px 0;
+      background-color: var(--bg-white);
+    }
+
+    .academy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .academy-visual img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+      display: block;
+    }
+
+    .academy-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+
+    .academy-content p {
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .academy-perks {
+      margin-bottom: 25px;
+    }
+
+    .academy-perks li {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .academy-perks li i {
+      color: var(--accent-red);
+      font-size: 1rem;
+    }
+
+    /* Director's Profile Section */
+    .director-section {
+      padding: 90px 0;
+      background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .director-wrapper {
+      background: #FFFFFF;
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    .director-banner {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--primary-navy) 60%, #1a365d 100%);
+      color: #FFFFFF;
+      padding: 40px;
+    }
+
+    .director-title-tag {
+      color: var(--accent-red);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .director-banner h2 {
+      color: #FFFFFF;
+      font-size: 2.3rem;
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .director-subtitle {
+      font-size: 1.15rem;
+      color: #E2E8F0;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .director-creed {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 6px 14px;
+      background: rgba(217, 37, 37, 0.18);
+      border: 1px solid var(--accent-red);
+      color: #FFC5C5;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 20px;
+      letter-spacing: 1px;
+    }
+
+    .director-content {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 40px;
+    }
+
+    .director-image-card {
+      text-align: center;
+    }
+
+    .director-image-card img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: var(--shadow-md);
+      border: 3px solid #FFFFFF;
+      object-fit: cover;
+    }
+
+    .director-quick-contact {
+      background: var(--bg-light);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 15px;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    .director-quick-contact div {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .director-quick-contact i {
+      color: var(--accent-red);
+    }
+
+    .profile-block {
+      margin-bottom: 25px;
+    }
+
+    .profile-block h3 {
+      font-size: 1.15rem;
+      color: var(--primary-navy);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 6px;
+    }
+
+    .profile-block h3 i {
+      color: var(--accent-red);
+    }
+
+    .cert-badges-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 10px;
+    }
+
+    .cert-item {
+      background: var(--bg-light);
+      border-left: 3px solid var(--accent-blue);
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 0.86rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cert-item.red-border {
+      border-left-color: var(--accent-red);
+    }
+
+    .cert-item i {
+      color: var(--accent-blue);
+      font-size: 0.9rem;
+    }
+
+    .cert-item.red-border i {
+      color: var(--accent-red);
+    }
+
+    .core-skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .core-skills-list li {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .core-skills-list li i {
+      color: var(--accent-red);
+      font-size: 0.95rem;
+    }
+
+    .consultancy-strip {
+      background: var(--navy-dark);
+      padding: 25px 30px;
+      color: #FFFFFF;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .consultancy-strip h4 {
+      color: var(--accent-red);
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .consultancy-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .consultancy-pill {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      color: #E2E8F0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .consultancy-pill i {
+      color: var(--accent-red);
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 90px 0;
+      background-color: var(--bg-light);
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .contact-form-container {
+      padding: 40px;
+    }
+
+    .contact-form .form-group {
+      margin-bottom: 20px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--primary-navy);
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+    }
+
+    .contact-info-panel {
+      background-color: var(--primary-navy);
+      color: #fff;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contact-info-panel h3 {
+      color: #fff;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .info-list li {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+      font-size: 0.95rem;
+    }
+
+    .info-list i {
+      color: var(--accent-red);
+      font-size: 1.2rem;
+      margin-top: 3px;
+    }
+
+    .corporate-credentials {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.85rem;
+      color: #CBD5E1;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--navy-dark);
+      color: #94A3B8;
+      padding: 60px 0 20px;
+      border-top: 4px solid var(--accent-red);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .footer-logo-wrap img {
+      height: 48px;
+      width: auto;
+      background: #fff;
+      padding: 4px;
+      border-radius: 4px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .footer-col p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--accent-red);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 990px) {
+      .director-content,
+      .academy-grid,
+      .contact-wrapper,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .director-image-card img {
+        max-width: 380px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px 0;
+        box-shadow: var(--shadow-md);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Informational Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div>
+        <span class="top-bar-item"><i class="fa-solid fa-location-dot"></i> 22 Ahmadu Bello Way, Kaduna, Nigeria</span>
+        <span class="top-bar-item"><i class="fa-solid fa-phone"></i> +234 803 687 0013</span>
+      </div>
+      <div>
+        <span class="top-bar-item"><i class="fa-solid fa-shield-halved"></i> RC: 7144782</span>
+        <span class="top-bar-item"><i class="fa-solid fa-envelope"></i> admincpazmadengineering@gmail.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#home" class="brand-logo">
+          <img src="logo.png" alt="AZMAD Engineering Services Limited Logo" />
+          <div class="brand-logo-text">
+            <span class="logo-main">AZMAD</span>
+            <span class="logo-sub">ENGINEERING SERVICES LTD.</span>
+          </div>
+        </a>
+        <div class="menu-toggle" id="mobile-menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#corporate-profile">Profile</a></li>
+          <li><a href="#campaigns">Solutions & Campaigns</a></li>
+          <li><a href="#training">Training Academy</a></li>
+          <li><a href="#director">Leadership</a></li>
+          <li><a href="#contact" class="btn btn-red">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">From Concept to Commissioning</span>
+        <h1>The Engineering for Your Solution</h1>
+        <p>Strategic advice, practical engineering solutions, and measurable results across the oil, gas, power, water, and energy transition value chains.</p>
+        <div class="hero-cta">
+          <a href="#campaigns" class="btn btn-red">Explore Solutions</a>
+          <a href="#contact" class="btn btn-outline-white">Request Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Numbers Ribbon -->
+  <div class="stats-ribbon">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>2023</h3>
+          <p>Year Incorporated</p>
+        </div>
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>Nigerian Owned & Operated</p>
+        </div>
+        <div class="stat-item">
+          <h3>COREN</h3>
+          <p>Certified Engineering Leadership</p>
+        </div>
+        <div class="stat-item">
+          <h3>QMS</h3>
+          <p>Structured Project Quality Plan</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Corporate Profile Banner Showcase -->
+  <section class="corporate-infographic-section" id="corporate-profile">
+    <div class="container">
+      <div class="section-title">
+        <h2>Corporate Profile & Strategic Partnerships</h2>
+        <p>Comprehensive engineering delivery in multi-disciplinary joint partnerships with industry leaders.</p>
+      </div>
+
+      <div class="infographic-wrapper">
+        <img src="ad-corporate.png" alt="AZMAD Corporate Profile and Strategic Partners" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialized Solutions & Advertising Campaigns -->
+  <section class="campaigns-section" id="campaigns">
+    <div class="container">
+      <div class="section-title">
+        <h2>Specialized Technical Solutions</h2>
+        <p>Accurate models, smarter engineering decisions, and maximum asset value.</p>
+      </div>
+
+      <div class="campaign-grid">
+        <!-- 1. Expert Consultation Services -->
+        <div class="campaign-card">
+          <div class="campaign-media">
+            <img src="ad-consultation.png" alt="Expert Consultation Services" />
+          </div>
+          <div class="campaign-desc">
+            <span class="tag">Strategic Advisory</span>
+            <h3>Expert Consultation Services</h3>
+            <p>Strategic advice, practical solutions, and measurable results spanning feasibility studies, project management consulting, performance improvement, and sustainability advisory[cite: 4].</p>
+            <div class="campaign-highlights">
+              <span>Strategic Planning</span>
+              <span>Feasibility Studies</span>
+              <span>Risk & Compliance</span>
+              <span>Project Success</span>
+            </div>
+            <a href="#contact" class="btn btn-red">Book Consultation</a>
+          </div>
+        </div>
+
+        <!-- 2. Nodal Analysis using PROSPER -->
+        <div class="campaign-card">
+          <div class="campaign-media circular">
+            <img src="ad-prosper.png" alt="Expert Nodal Analysis using PROSPER" />
+          </div>
+          <div class="campaign-desc">
+            <span class="tag">Production Optimization</span>
+            <h3>Expert Nodal Analysis using PROSPER&reg;</h3>
+            <p>Accurate inflow and outflow performance analysis, well and surface network modeling, and artificial lift optimization using industry-leading IPM software[cite: 5].</p>
+            <div class="campaign-highlights">
+              <span>Single & Multi-Well</span>
+              <span>Inflow & Outflow</span>
+              <span>Artificial Lift</span>
+              <span>Scenario Analysis</span>
+            </div>
+            <a href="#contact" class="btn btn-red">Optimize Well Performance</a>
+          </div>
+        </div>
+
+        <!-- 3. Well Test Consultation Services -->
+        <div class="campaign-card">
+          <div class="campaign-media">
+            <img src="ad-welltest.png" alt="Well Test Consultation Services" />
+          </div>
+          <div class="campaign-desc">
+            <span class="tag">Reservoir Characterization</span>
+            <h3>Well Test Consultation Services</h3>
+            <p>Accurate well test design, pressure transient analysis (PTA), data quality verification, and comprehensive reporting for smarter reservoir decisions.</p>
+            <div class="campaign-highlights">
+              <span>Well Test Design</span>
+              <span>Pressure Transient</span>
+              <span>Dispute Resolution</span>
+              <span>Actionable Reporting</span>
+            </div>
+            <a href="#contact" class="btn btn-red">Request Well Testing Advisory</a>
+          </div>
+        </div>
+
+        <!-- 4. Integrated Production Modelling using GAP -->
+        <div class="campaign-card">
+          <div class="campaign-media circular">
+            <img src="ad-gap.png" alt="Expert Integrated Production Modelling using GAP" />
+          </div>
+          <div class="campaign-desc">
+            <span class="tag">Field Development</span>
+            <h3>Integrated Production Modelling using GAP&trade;</h3>
+            <p>One model connecting all disciplines. Build reliable models for integrated reservoirs, surface networks, and facility process bottlenecks to optimize field recovery[cite: 7].</p>
+            <div class="campaign-highlights">
+              <span>Integrated Reservoir</span>
+              <span>Surface Network</span>
+              <span>Production Forecasting</span>
+              <span>GAP Optimization</span>
+            </div>
+            <a href="#contact" class="btn btn-red">Unlock Reservoir Potential</a>
+          </div>
+        </div>
+
+        <!-- 5. Renewable Energy Services -->
+        <div class="campaign-card">
+          <div class="campaign-media circular">
+            <img src="ad-renewable.png" alt="Expert Renewable Energy Services" />
+          </div>
+          <div class="campaign-desc">
+            <span class="tag">Clean Energy Transition</span>
+            <h3>Expert Renewable Energy Services</h3>
+            <p>Complete assessment, design, supply, and installation of solar PV systems, wind turbine solutions, hybrid energy storage, and power balance systems.</p>
+            <div class="campaign-highlights">
+              <span>Solar Energy Systems</span>
+              <span>Wind Turbine Solutions</span>
+              <span>Hybrid Storage (BOS)</span>
+              <span>Preventive Maintenance</span>
+            </div>
+            <a href="#contact" class="btn btn-red">Power a Greener Tomorrow</a>
+          </div>
+        </div>
+
+        <!-- 6. Water Borehole Drilling Services -->
+        <div class="campaign-card">
+          <div class="campaign-media circular">
+            <img src="ad-borehole.png" alt="Expert Water Borehole Drilling Services" />
+          </div>
+          <div class="campaign-desc">
+            <span class="tag">Water Engineering</span>
+            <h3>Water Borehole Drilling Services</h3>
+            <p>Providing access to pure water for life with geophysical surveys, well design, casing, pump installation, water quality testing, and rehabilitation maintenance.</p>
+            <div class="campaign-highlights">
+              <span>Geophysical Siting</span>
+              <span>Borehole Drilling</span>
+              <span>Water Quality Testing</span>
+              <span>After-Sales Support</span>
+            </div>
+            <a href="#contact" class="btn btn-red">Drill the Source of Life</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Training & Academy Section -->
+  <section class="academy-section" id="training">
+    <div class="container">
+      <div class="section-title">
+        <h2>Professional Development & Training</h2>
+        <p>Bridging the gap between theory and industry practice with hands-on software training.</p>
+      </div>
+
+      <!-- Feature 1: 3-Month Reservoir Engineering Training -->
+      <div class="academy-grid" style="margin-bottom: 60px;">
+        <div class="academy-visual">
+          <img src="ad-training-banner.png" alt="3-Month Reservoir Engineering Training" />
+        </div>
+        <div class="academy-content">
+          <h3>Become a Competent Reservoir Engineer in Three Months[cite: 10]</h3>
+          <p>Gain practical training using world-class industry software, accelerate your career growth, and unlock high-value job opportunities in the oil and gas sector.</p>
+          <ul class="academy-perks">
+            <li><i class="fa-solid fa-calendar-check"></i> <strong>Start Date:</strong> January 10, 2027</li>
+            <li><i class="fa-solid fa-clock"></i> <strong>Duration:</strong> Three Months Intensive[cite: 10]</li>
+            <li><i class="fa-solid fa-laptop-code"></i> <strong>Focus:</strong> Hands-on modelling on industry-standard suites</li>
+            <li><i class="fa-solid fa-graduation-cap"></i> <strong>Outcome:</strong> Verified Certificate of Completion & career advancement</li>
+          </ul>
+          <a href="#contact" class="btn btn-red">Enroll in 3-Month Program</a>
+        </div>
+      </div>
+
+      <!-- Feature 2: Practical Skills for Young Professionals -->
+      <div class="academy-grid">
+        <div class="academy-content">
+          <h3>Practical Skills for Young Professionals</h3>
+          <p>Specially curated for Petroleum, Chemical, and Geological engineering graduates and undergraduates seeking industry job-readiness.</p>
+          <ul class="academy-perks">
+            <li><i class="fa-solid fa-chalkboard-user"></i> <strong>100% Online Live Classes:</strong> Interactive Q&A sessions anywhere</li>
+            <li><i class="fa-solid fa-user-gear"></i> <strong>Expert Instructor:</strong> Taught by Engr. Habib Ahmad (Seasoned Consultant)</li>
+            <li><i class="fa-solid fa-wrench"></i> <strong>Software Mastery:</strong> Eclipse, Petrel, Aspen HYSYS, AutoCAD, OFM & PIPESIM</li>
+            <li><i class="fa-solid fa-briefcase"></i> <strong>Real-World Exposure:</strong> Practical field projects, case studies & CV boost</li>
+          </ul>
+          <a href="#contact" class="btn btn-red">Join Next Online Cohort</a>
+        </div>
+        <div class="academy-visual">
+          <img src="ad-young-prof.png" alt="Practical Skills for Young Professionals by Engr. Habib Ahmad" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive Leadership Profile -->
+  <section class="director-section" id="director">
+    <div class="container">
+      <div class="section-title">
+        <h2>Executive Leadership</h2>
+        <p>Engineering consultancy led by verified professional competency and international accreditation.</p>
+      </div>
+
+      <div class="director-wrapper">
+        <div class="director-banner">
+          <span class="director-title-tag">Company Director & Principal Consultant</span>
+          <h2>ENGR. HABIB AHMAD</h2>
+          <div class="director-subtitle">Petroleum Engineering Consultant</div>
+          <div class="director-creed">PROFESSIONAL &bull; COMPETENT &bull; COMMITTED TO EXCELLENCE</div>
+        </div>
+
+        <div class="director-content">
+          <!-- Left Column -->
+          <div class="director-image-card">
+            <img src="director.png" alt="Engr. Habib Ahmad Profile" />
+            
+            <div class="director-quick-contact">
+              <div>
+                <i class="fa-solid fa-id-card-clip"></i>
+                <span><strong>COREN:</strong> Registered Engineer</span>
+              </div>
+              <div>
+                <i class="fa-solid fa-phone"></i>
+                <span>+234 803 687 0013</span>
+              </div>
+              <div>
+                <i class="fa-solid fa-envelope"></i>
+                <span>ahmadhabibmohammad@gmail.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div>
+            <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 25px;">
+              Extensive experience providing technical consultancy and advisory services across the oil and gas value chain and energy transition.
+            </p>
+
+            <!-- Registration & Memberships -->
+            <div class="profile-block">
+              <h3><i class="fa-solid fa-building-columns"></i> Professional Registration & Memberships</h3>
+              <div class="cert-badges-grid">
+                <div class="cert-item red-border">
+                  <i class="fa-solid fa-stamp"></i>
+                  <span>COREN Registered Engineer</span>
+                </div>
+                <div class="cert-item">
+                  <i class="fa-solid fa-certificate"></i>
+                  <span>Nigerian Society of Engineers (NSE)</span>
+                </div>
+                <div class="cert-item">
+                  <i class="fa-solid fa-certificate"></i>
+                  <span>Nigerian Institution of Petroleum and Gas Engineers (NIPGE)</span>
+                </div>
+                <div class="cert-item">
+                  <i class="fa-solid fa-certificate"></i>
+                  <span>Society of Petroleum Engineers International (SPE)</span>
+                </div>
+                <div class="cert-item">
+                  <i class="fa-solid fa-certificate"></i>
+                  <span>International Association of Engineers (IAENG)</span>
+                </div>
+                <div class="cert-item">
+                  <i class="fa-solid fa-certificate"></i>
+                  <span>International Association of Project Managers (IAPM)</span>
+                </div>
+                <div class="cert-item">
+                  <i class="fa-solid fa-certificate"></i>
+                  <span>Society of Energy Scholars of Nigeria (SESN)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="profile-block">
+              <h3><i class="fa-solid fa-award"></i> Professional Certifications</h3>
+              <div class="cert-badges-grid">
+                <div class="cert-item">
+                  <i class="fa-solid fa-briefcase"></i>
+                  <span>Certified Project Manager (CPM/IAPM)</span>
+                </div>
+                <div class="cert-item">
+                  <i class="fa-solid fa-chart-line"></i>
+                  <span>Lean Six Sigma Yellow Belt</span>
+                </div>
+                <div class="cert-item">
+                  <i class="fa-solid fa-life-ring"></i>
+                  <span>BOSIET Offshore Safety Induction</span>
+                </div>
+                <div class="cert-item">
+                  <i class="fa-solid fa-shield-virus"></i>
+                  <span>Offshore Safety Permit (OSP)</span>
+                </div>
+                <div class="cert-item">
+                  <i class="fa-solid fa-layer-group"></i>
+                  <span>Petroleum Evaluation & Prospect Assessment</span>
+                </div>
+                <div class="cert-item">
+                  <i class="fa-solid fa-chart-column"></i>
+                  <span>Log Interpretation & Petrophysics</span>
+                </div>
+                <div class="cert-item">
+                  <i class="fa-solid fa-compass"></i>
+                  <span>Drilling & Geosteering Advisory</span>
+                </div>
+                <div class="cert-item">
+                  <i class="fa-solid fa-gauge-high"></i>
+                  <span>Well Performance & Flow Analysis</span>
+                </div>
+                <div class="cert-item">
+                  <i class="fa-solid fa-chalkboard-user"></i>
+                  <span>Project Management Masterclass</span>
+                </div>
+                <div class="cert-item red-border">
+                  <i class="fa-solid fa-notes-medical"></i>
+                  <span>HSE Levels 1, 2, and 3</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Core Experience -->
+            <div class="profile-block" style="margin-bottom: 0;">
+              <h3><i class="fa-solid fa-screwdriver-wrench"></i> Core Expertise & Practical Advisory</h3>
+              <ul class="core-skills-list">
+                <li><i class="fa-solid fa-check"></i> Reservoir Modelling and Simulation</li>
+                <li><i class="fa-solid fa-check"></i> Reservoir Engineering and Analysis</li>
+                <li><i class="fa-solid fa-check"></i> Production Optimization & Nodal Analysis</li>
+                <li><i class="fa-solid fa-check"></i> Well Performance Evaluation & Surveillance</li>
+                <li><i class="fa-solid fa-check"></i> Drilling Support & Geosteering Advisory</li>
+                <li><i class="fa-solid fa-check"></i> Petroleum Project Management[cite: 3]</li>
+                <li><i class="fa-solid fa-check"></i> Offshore Operations & Facilities Support</li>
+                <li><i class="fa-solid fa-check"></i> Process Improvement & Operational Excellence</li>
+                <li><i class="fa-solid fa-check"></i> HSE Compliance and Risk Management</li>
+                <li><i class="fa-solid fa-check"></i> Renewable Energy Solutions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Consultancy Areas Horizontal Strip -->
+        <div class="consultancy-strip">
+          <h4>Consultancy Focus Areas</h4>
+          <div class="consultancy-tags">
+            <span class="consultancy-pill"><i class="fa-solid fa-oil-well"></i> Reservoir Engineering</span>
+            <span class="consultancy-pill"><i class="fa-solid fa-chart-line"></i> Production Optimization</span>
+            <span class="consultancy-pill"><i class="fa-solid fa-bore-hole"></i> Drilling Support</span>
+            <span class="consultancy-pill"><i class="fa-solid fa-computer"></i> Reservoir Modelling & Simulation</span>
+            <span class="consultancy-pill"><i class="fa-solid fa-anchor"></i> Offshore Operations</span>
+            <span class="consultancy-pill"><i class="fa-solid fa-gears"></i> Process Improvement</span>
+            <span class="consultancy-pill"><i class="fa-solid fa-circle-check"></i> Operational Excellence</span>
+            <span class="consultancy-pill"><i class="fa-solid fa-shield-halved"></i> HSE Compliance</span>
+            <span class="consultancy-pill"><i class="fa-solid fa-solar-panel"></i> Renewable Energy</span>
+            <span class="consultancy-pill"><i class="fa-solid fa-users"></i> Technical Advisory Services</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Booking -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Engage Our Experts</h2>
+        <p>Let’s turn ideas into solutions and challenges into opportunities.</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <!-- Form -->
+        <div class="contact-form-container">
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your request has been forwarded to AZMAD Engineering.');">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Engr. / Mr. / Ms." required />
+            </div>
+            <div class="form-group">
+              <label for="email">Work Email</label>
+              <input type="email" id="email" placeholder="name@company.com" required />
+            </div>
+            <div class="form-group">
+              <label for="service">Service / Program Required</label>
+              <select id="service" required>
+                <option value="">Select an engineering solution...</option>
+                <option value="Consultation">Expert Consultation Services</option>
+                <option value="PROSPER">Nodal Analysis using PROSPER</option>
+                <option value="WellTest">Well Test Consultation Services</option>
+                <option value="GAP">Integrated Production Modelling (GAP)</option>
+                <option value="Renewable">Renewable Energy Solutions</option>
+                <option value="Borehole">Water Borehole Drilling</option>
+                <option value="Training-3Month">3-Month Reservoir Engineering Training</option>
+                <option value="Training-YoungProf">Young Professionals Training Program</option>
+                <option value="General">General Engineering / EPC Services</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Project Scope / Inquiry Details</label>
+              <textarea id="message" rows="4" placeholder="Describe your project, asset, or training inquiry..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-red" style="width: 100%;">Submit Inquiry</button>
+          </form>
+        </div>
+
+        <!-- Corporate Info -->
+        <div class="contact-info-panel">
+          <div>
+            <h3>AZMAD Head Office</h3>
+            <ul class="info-list">
+              <li>
+                <i class="fa-solid fa-map-location-dot"></i>
+                <div>
+                  <strong>Address</strong><br />
+                  22 Ahmadu Bello Way, Kaduna, Kaduna State, Nigeria
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-user-tie"></i>
+                <div>
+                  <strong>Principal Executive Officer</strong><br />
+                  Engr. Ahmad Habib Mohammad
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <strong>Direct Line</strong><br />
+                  +234 803 687 0013
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <strong>Official Communications</strong><br />
+                  admincpazmadengineering@gmail.com<br />
+                  admin@azmadengineeringservices.com
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="corporate-credentials">
+            <strong>Corporate Identifiers:</strong><br />
+            RC: 7144782 | TIN: 31597645-0001<br />
+            SCUML Certificate No: RN: SC 191605657
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo-wrap">
+            <img src="logo.png" alt="AZMAD Logo" />
+            <h4 style="margin: 0; color: #fff;">AZMAD ENGINEERING SERVICES</h4>
+          </div>
+          <p>“The engineering for your solution.”Delivering innovative, reliable, and cost-effective engineering, energy, and infrastructure solutions that drive progress and create value[cite: 8].</p>
+        </div>
+        <div class="footer-col">
+          <h4>Specialized Solutions</h4>
+          <ul>
+            <li><a href="#campaigns">PROSPER Nodal Analysis</a></li>
+            <li><a href="#campaigns">GAP Production Modelling</a></li>
+            <li><a href="#campaigns">Well Test Consultancy</a></li>
+            <li><a href="#campaigns">Renewable Energy Systems</a></li>
+            <li><a href="#campaigns">Borehole Drilling Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Training & Company</h4>
+          <ul>
+            <li><a href="#corporate-profile">Corporate Profile</a></li>
+            <li><a href="#director">Engr. Habib Ahmad (COREN)</a></li>
+            <li><a href="#training">Reservoir Engineering Academy</a></li>
+            <li><a href="#training">Young Professionals Program</a></li>
+            <li><a href="#contact">Get a Quote</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AZMAD Engineering Services Limited. All rights reserved.</div>
+        <div>RC: 7144782 | 22 Ahmadu Bello Way, Kaduna, Nigeria</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Mobile Menu -->
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
